@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form>
+        <span>Name :</span> <input type="text" name="name" id="unae" maxlength="10" minlength="5" >
+
+    </form> -->
+    <!-- <span>Name :</span> <input type="text" id="uname" name="uname" pattern="[a-zA-Z0-9]+" minlength="4" maxlength="10"> -->
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>
+            How to validate input field in HTML Form?
+        </title>
+        <style>
+            * {
+                background-color: rgb(218, 214, 238);
+
+
+            }
+
+            .rdio {
+                display: flex;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 style="color: rgb(64, 77, 78);">
+            Fill All Data To Predict Your Future
+        </h1>
+
+        <form id="myForm" >
+            <!-- <fieldset>
+                <legend>Data About You Enter:</legend> -->
+
+            <label for="Uname">User Name :</label>
+            <input type="text" name="Uname" id="Uname" required>
+            <br><br>
+
+            <label for="Nname">Full Name : </label>
+            <input type="text" name="Nname" id="Nname" required maxlength="60"
+                oninput="this.value = this.value.replace(/[^A-za-z\s]/g, '');">
+            <br><br>
+
+            <label for="email">Email Id :</label>
+            <input type="email" name="email" id="email" required>
+            <br><br>
+            <label for="password">Password :</label>
+            <input type="password" name="password" id="password" required
+                pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g" minlength="10" maxlength="20" />
+            <br><br>
+
+            <label for="PhoneN">Phone No.:</label>
+            <input type="text" name="PhoneN" id="PhoneN" required minlength="10" maxlength="10"
+                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" />
+            <br><br>
+
+            <div class="rdio">
+                <input type="radio" id="Male" name="fav_language" value="Male" required>
+                <label for="html">Male</label>
+
+                <input type="radio" id="Female" name="fav_language" value="Female" required>
+                <label for="html">Female</label>
+            </div><br>
+
+            <button type="button" onclick="showInput();" value="submit"><br/>
+            <label>Your input: </label>
+
+        </form>
+        <p><span id='display'></span></p>
+        <script>
+            function showInput() {
+
+            //   var x =  (document.getElementsById("myForm"));
+            //   console.log(x);
+              //var y = document.querySelector(['button[value= submit]']);
+              //var z =  new FormData(document.getElementsByName("Form"));
+
+
+                var ss = document.getElementById("Uname").value;
+                var sdds = document.getElementById("Nname").value;
+
+                console.log(ss );
+                console.log(sdds );
+               
+
+                // const array = [];
+
+                // for (let i = 0; i < array.length; i++) {
+                //     array.push.x[i].value;
+                // }
+                // console.log(array);
+                // document.write(array);
+                // document.getElementById("display").innerHTML = array;
+
+               
+
+
+            }
+
+
+
+        </script>
+
+    </body>
+
+    </html>
